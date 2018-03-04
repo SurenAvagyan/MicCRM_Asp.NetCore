@@ -5,6 +5,11 @@
     <UserSecretsId>aspnet-MicCRM-20F31D97-4A07-477E-B296-FE486F4B3C7E</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20180304224523_EntitiesAdded.cs" />
+    <Compile Remove="Data\Migrations\20180304224523_EntitiesAdded.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />

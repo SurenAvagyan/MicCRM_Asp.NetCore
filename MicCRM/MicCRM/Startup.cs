@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MicCRM.Data;
-using MicCRM.Models;
 using MicCRM.Services;
+using MicCRM.Data.Entities;
 
 namespace MicCRM
 {

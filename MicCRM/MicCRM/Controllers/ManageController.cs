@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using MicCRM.Models;
 using MicCRM.Models.ManageViewModels;
 using MicCRM.Services;
+using MicCRM.Data.Entities;
 
 namespace MicCRM.Controllers
 {
