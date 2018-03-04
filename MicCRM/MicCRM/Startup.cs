@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MicCRM.Data;
 using MicCRM.Services;
+using MicCRM.Models;
 using MicCRM.Data.Entities;
 
 namespace MicCRM
@@ -40,7 +41,8 @@ namespace MicCRM
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
+            ApplicationDbContext dbContext)
         {
             if (env.IsDevelopment())
             {
@@ -63,6 +65,8 @@ namespace MicCRM
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            Helpers.DatabaseSeeding.Seed(dbContext);
         }
     }
 }
